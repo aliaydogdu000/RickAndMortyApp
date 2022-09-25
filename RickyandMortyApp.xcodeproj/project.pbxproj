@@ -9,13 +9,19 @@
 /* Begin PBXBuildFile section */
 		F40568C328DF04780038A141 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40568C228DF04780038A141 /* AppDelegate.swift */; };
 		F40568C528DF04780038A141 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40568C428DF04780038A141 /* SceneDelegate.swift */; };
-		F40568C728DF04780038A141 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40568C628DF04780038A141 /* ViewController.swift */; };
 		F40568CA28DF04780038A141 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F40568C828DF04780038A141 /* Main.storyboard */; };
 		F40568CC28DF04790038A141 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F40568CB28DF04790038A141 /* Assets.xcassets */; };
 		F40568CF28DF04790038A141 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F40568CD28DF04790038A141 /* LaunchScreen.storyboard */; };
 		F40568DA28DF04790038A141 /* RickyandMortyAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40568D928DF04790038A141 /* RickyandMortyAppTests.swift */; };
 		F40568E428DF04790038A141 /* RickyandMortyAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40568E328DF04790038A141 /* RickyandMortyAppUITests.swift */; };
 		F40568E628DF04790038A141 /* RickyandMortyAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40568E528DF04790038A141 /* RickyandMortyAppUITestsLaunchTests.swift */; };
+		F40568FB28DF055D0038A141 /* RickyandMortyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40568FA28DF055D0038A141 /* RickyandMortyViewController.swift */; };
+		F40568FE28DF05CB0038A141 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F40568FD28DF05CB0038A141 /* SnapKit */; };
+		F405690028DF14200038A141 /* RickyMortyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40568FF28DF14200038A141 /* RickyMortyService.swift */; };
+		F405690228DF14570038A141 /* RickyMortyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F405690128DF14570038A141 /* RickyMortyModel.swift */; };
+		F405690528DF17680038A141 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = F405690428DF17680038A141 /* Alamofire */; };
+		F405690828DF17A20038A141 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = F405690728DF17A20038A141 /* AlamofireImage */; };
+		F405690A28DF1C5D0038A141 /* RickyMortyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F405690928DF1C5D0038A141 /* RickyMortyViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +45,6 @@
 		F40568BF28DF04780038A141 /* RickyandMortyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickyandMortyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F40568C228DF04780038A141 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F40568C428DF04780038A141 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F40568C628DF04780038A141 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F40568C928DF04780038A141 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F40568CB28DF04790038A141 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F40568CE28DF04790038A141 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +54,10 @@
 		F40568DF28DF04790038A141 /* RickyandMortyAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RickyandMortyAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F40568E328DF04790038A141 /* RickyandMortyAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickyandMortyAppUITests.swift; sourceTree = "<group>"; };
 		F40568E528DF04790038A141 /* RickyandMortyAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickyandMortyAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F40568FA28DF055D0038A141 /* RickyandMortyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickyandMortyViewController.swift; sourceTree = "<group>"; };
+		F40568FF28DF14200038A141 /* RickyMortyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickyMortyService.swift; sourceTree = "<group>"; };
+		F405690128DF14570038A141 /* RickyMortyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickyMortyModel.swift; sourceTree = "<group>"; };
+		F405690928DF1C5D0038A141 /* RickyMortyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickyMortyViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +65,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F40568FE28DF05CB0038A141 /* SnapKit in Frameworks */,
+				F405690528DF17680038A141 /* Alamofire in Frameworks */,
+				F405690828DF17A20038A141 /* AlamofireImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,13 +111,10 @@
 		F40568C128DF04780038A141 /* RickyandMortyApp */ = {
 			isa = PBXGroup;
 			children = (
-				F40568C228DF04780038A141 /* AppDelegate.swift */,
-				F40568C428DF04780038A141 /* SceneDelegate.swift */,
-				F40568C628DF04780038A141 /* ViewController.swift */,
-				F40568C828DF04780038A141 /* Main.storyboard */,
-				F40568CB28DF04790038A141 /* Assets.xcassets */,
-				F40568CD28DF04790038A141 /* LaunchScreen.storyboard */,
+				F40568F428DF04D00038A141 /* features */,
+				F40568F228DF048A0038A141 /* core */,
 				F40568D028DF04790038A141 /* Info.plist */,
+				F40568CD28DF04790038A141 /* LaunchScreen.storyboard */,
 			);
 			path = RickyandMortyApp;
 			sourceTree = "<group>";
@@ -127,6 +136,68 @@
 			path = RickyandMortyAppUITests;
 			sourceTree = "<group>";
 		};
+		F40568F228DF048A0038A141 /* core */ = {
+			isa = PBXGroup;
+			children = (
+				F40568CB28DF04790038A141 /* Assets.xcassets */,
+				F40568C828DF04780038A141 /* Main.storyboard */,
+				F40568C428DF04780038A141 /* SceneDelegate.swift */,
+				F40568C228DF04780038A141 /* AppDelegate.swift */,
+			);
+			path = core;
+			sourceTree = "<group>";
+		};
+		F40568F428DF04D00038A141 /* features */ = {
+			isa = PBXGroup;
+			children = (
+				F40568F528DF04DF0038A141 /* RickyandMorty */,
+			);
+			path = features;
+			sourceTree = "<group>";
+		};
+		F40568F528DF04DF0038A141 /* RickyandMorty */ = {
+			isa = PBXGroup;
+			children = (
+				F40568F928DF051D0038A141 /* view */,
+				F40568F828DF05150038A141 /* viewmodel */,
+				F40568F728DF05110038A141 /* model */,
+				F40568F628DF05070038A141 /* service */,
+			);
+			path = RickyandMorty;
+			sourceTree = "<group>";
+		};
+		F40568F628DF05070038A141 /* service */ = {
+			isa = PBXGroup;
+			children = (
+				F40568FF28DF14200038A141 /* RickyMortyService.swift */,
+			);
+			path = service;
+			sourceTree = "<group>";
+		};
+		F40568F728DF05110038A141 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				F405690128DF14570038A141 /* RickyMortyModel.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		F40568F828DF05150038A141 /* viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+				F405690928DF1C5D0038A141 /* RickyMortyViewModel.swift */,
+			);
+			path = viewmodel;
+			sourceTree = "<group>";
+		};
+		F40568F928DF051D0038A141 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				F40568FA28DF055D0038A141 /* RickyandMortyViewController.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +214,11 @@
 			dependencies = (
 			);
 			name = RickyandMortyApp;
+			packageProductDependencies = (
+				F40568FD28DF05CB0038A141 /* SnapKit */,
+				F405690428DF17680038A141 /* Alamofire */,
+				F405690728DF17A20038A141 /* AlamofireImage */,
+			);
 			productName = RickyandMortyApp;
 			productReference = F40568BF28DF04780038A141 /* RickyandMortyApp.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +291,11 @@
 				Base,
 			);
 			mainGroup = F40568B628DF04780038A141;
+			packageReferences = (
+				F40568FC28DF05CB0038A141 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				F405690328DF17680038A141 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				F405690628DF17A20038A141 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
+			);
 			productRefGroup = F40568C028DF04780038A141 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -258,9 +339,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F40568C728DF04780038A141 /* ViewController.swift in Sources */,
+				F405690028DF14200038A141 /* RickyMortyService.swift in Sources */,
+				F405690A28DF1C5D0038A141 /* RickyMortyViewModel.swift in Sources */,
 				F40568C328DF04780038A141 /* AppDelegate.swift in Sources */,
+				F405690228DF14570038A141 /* RickyMortyModel.swift in Sources */,
 				F40568C528DF04780038A141 /* SceneDelegate.swift in Sources */,
+				F40568FB28DF055D0038A141 /* RickyandMortyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -602,6 +686,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F40568FC28DF05CB0038A141 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+		F405690328DF17680038A141 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		F405690628DF17A20038A141 /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/AlamofireImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F40568FD28DF05CB0038A141 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F40568FC28DF05CB0038A141 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		F405690428DF17680038A141 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F405690328DF17680038A141 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		F405690728DF17A20038A141 /* AlamofireImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F405690628DF17A20038A141 /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			productName = AlamofireImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F40568B728DF04780038A141 /* Project object */;
 }
