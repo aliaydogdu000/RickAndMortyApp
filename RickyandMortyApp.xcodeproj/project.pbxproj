@@ -22,6 +22,7 @@
 		F405690528DF17680038A141 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = F405690428DF17680038A141 /* Alamofire */; };
 		F405690828DF17A20038A141 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = F405690728DF17A20038A141 /* AlamofireImage */; };
 		F405690A28DF1C5D0038A141 /* RickyMortyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F405690928DF1C5D0038A141 /* RickyMortyViewModel.swift */; };
+		F4C244AC28E04EE0007F3ED6 /* RickAndMortTableViewcellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C244AB28E04EE0007F3ED6 /* RickAndMortTableViewcellTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		F40568FF28DF14200038A141 /* RickyMortyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickyMortyService.swift; sourceTree = "<group>"; };
 		F405690128DF14570038A141 /* RickyMortyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickyMortyModel.swift; sourceTree = "<group>"; };
 		F405690928DF1C5D0038A141 /* RickyMortyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickyMortyViewModel.swift; sourceTree = "<group>"; };
+		F4C244AB28E04EE0007F3ED6 /* RickAndMortTableViewcellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMortTableViewcellTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,9 +195,18 @@
 		F40568F928DF051D0038A141 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				F4C244A828E04E60007F3ED6 /* tableViewCell */,
 				F40568FA28DF055D0038A141 /* RickyandMortyViewController.swift */,
 			);
 			path = view;
+			sourceTree = "<group>";
+		};
+		F4C244A828E04E60007F3ED6 /* tableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				F4C244AB28E04EE0007F3ED6 /* RickAndMortTableViewcellTableViewCell.swift */,
+			);
+			path = tableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,6 +352,7 @@
 			files = (
 				F405690028DF14200038A141 /* RickyMortyService.swift in Sources */,
 				F405690A28DF1C5D0038A141 /* RickyMortyViewModel.swift in Sources */,
+				F4C244AC28E04EE0007F3ED6 /* RickAndMortTableViewcellTableViewCell.swift in Sources */,
 				F40568C328DF04780038A141 /* AppDelegate.swift in Sources */,
 				F405690228DF14570038A141 /* RickyMortyModel.swift in Sources */,
 				F40568C528DF04780038A141 /* SceneDelegate.swift in Sources */,

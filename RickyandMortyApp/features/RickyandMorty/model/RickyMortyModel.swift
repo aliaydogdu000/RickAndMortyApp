@@ -1,6 +1,6 @@
 //
-//  RickyMortyModel.swift
-//  RickyandMortyApp
+//  RickMortyModel.swift
+//  RickandMortyApp
 //
 //  Created by Ali Aydoğdu on 24.09.2022.
 //

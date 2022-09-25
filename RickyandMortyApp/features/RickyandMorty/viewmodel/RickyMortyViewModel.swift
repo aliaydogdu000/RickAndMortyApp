@@ -1,43 +1,59 @@
 //
-//  RickyMortyViewModel.swift
-//  RickyandMortyApp
+//  RickMortyViewModel.swift
+//  RickandMortyApp
 //
 //  Created by Ali Aydoğdu on 24.09.2022.
 //
 
 import Foundation
 
-protocol IRickyMortyViewModel{
+protocol IRickMortyViewModel{
     func fetchItems()
     func changeLoading()
     
-    var rickyMortyCharacters: [Result] {
+    var rickMortyCharacters: [Result] {
         get set
     }
-    var rickyMortyServcice: IRickyMortyService {
+    var RickMortyServcice: IRickMortyService {
         get
     }
+    
+    var rickandMortyOutPut: RickMortyOutPut? {
+        get
+    }
+    func setDelegate(output:RickMortyOutPut)
 }
-class RickyMortyViewModel:IRickyMortyViewModel{
+
+final class RickMortyViewModel:IRickMortyViewModel{
+    var rickandMortyOutPut: RickMortyOutPut?
     
     
-    var rickyMortyCharacters: [Result]=[]
-    let rickyMortyServcice: IRickyMortyService
+    func setDelegate(output: RickMortyOutPut) {
+        rickandMortyOutPut = output
+    }
+    
+    
+    
+    var rickMortyCharacters: [Result]=[]
+    private var isLoading = false
+    let RickMortyServcice: IRickMortyService
     
     init(){
-        rickyMortyServcice = RickyMortyService()
+        RickMortyServcice = RickMortyService()
     }
     func fetchItems() {
         changeLoading()
-        rickyMortyServcice.fetchAllData { (response) in
-            changeLoading()
-            rickyMortyCharacters = response ?? []
+        RickMortyServcice.fetchAllData { [weak self](response) in
+            self?.changeLoading()
+            self?.rickMortyCharacters = response ?? []
+            self?.rickandMortyOutPut?.saveDatas(values: self?.rickMortyCharacters ?? [])
         }
     }
     
     func changeLoading() {
-        <#code#>
+        isLoading = !isLoading
+        rickandMortyOutPut?.changeLoading(isLoad: isLoading)
     }
     
     
-    
+}

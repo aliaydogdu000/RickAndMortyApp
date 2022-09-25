@@ -1,6 +1,6 @@
 //
-//  RickyandMortyViewController.swift
-//  RickyandMortyApp
+//  RickandMortyViewController.swift
+//  RickandMortyApp
 //
 //  Created by Ali Aydoğdu on 24.09.2022.
 //
@@ -8,33 +8,48 @@
 import UIKit
 import SnapKit
 
-class RickyandMortyViewController: UIViewController {
+
+protocol RickMortyOutPut{
+    func changeLoading(isLoad:Bool)
+    func saveDatas(values:[Result])
+}
+
+class RickandMortyViewController: UIViewController {
     private let labelTitle:UILabel = UILabel()
-    private let box:UIView = UIView()
+    private let tableView:UITableView = UITableView()
     private let indicator:UIActivityIndicatorView = UIActivityIndicatorView()
+    
+    private lazy var results:[Result] = []
+    lazy var viewMoodel:IRickMortyViewModel = RickMortyViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
-
+        viewMoodel.setDelegate(output: self)
+        viewMoodel.fetchItems()
     }
     
     func configure(){
         view.addSubview(labelTitle)
-        view.addSubview(box)
+        view.addSubview(tableView)
         view.addSubview(indicator)
+        
         drawDesign()
-        makeBox()
+        makeTableView()
         makeIndicator()
         makeTitleLabel()
         
     }
     private func drawDesign(){
         
+        tableView.dataSource=self
+        tableView.delegate=self
+        tableView.register(RickAndMortyTableViewcell.self, forCellReuseIdentifier: RickAndMortyTableViewcell.Identifier.custom.rawValue)
+        tableView.rowHeight = 200
         DispatchQueue.main.async {
-            self.box.backgroundColor = .red
             self.view.backgroundColor = .white
-            self.labelTitle.text = "ALİ"
+            self.labelTitle.font = .boldSystemFont(ofSize: 25)
+            self.labelTitle.text = "Rick And Morty Characters"
             self.indicator.color = .red
         }
         indicator.startAnimating()
@@ -43,10 +58,40 @@ class RickyandMortyViewController: UIViewController {
    
 
 }
-extension RickyandMortyViewController{
+extension RickandMortyViewController:UITableViewDataSource,UITableViewDelegate{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return results.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell : RickAndMortyTableViewcell = tableView.dequeueReusableCell(withIdentifier: RickAndMortyTableViewcell.Identifier.custom.rawValue) as? RickAndMortyTableViewcell else {
+            return UITableViewCell()
+        }
+       
+        cell.saveModel(model: results[indexPath.row])
+        return cell
+    }
+    
+    
+}
+
+extension RickandMortyViewController:RickMortyOutPut{
+    func changeLoading(isLoad: Bool) {
+        isLoad ?indicator.startAnimating():indicator.stopAnimating()
+    }
+    
+    func saveDatas(values: [Result]) {
+        results = values
+        tableView.reloadData()
+    }
+    
+    
+}
+
+extension RickandMortyViewController{
     private func makeTitleLabel(){
         labelTitle.snp.makeConstraints{ (make) in
-            make.top.equalToSuperview().offset(50)
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(10)
             make.left.equalTo(10)
             make.right.equalToSuperview()
             make.height.greaterThanOrEqualTo(15)
@@ -60,8 +105,8 @@ extension RickyandMortyViewController{
             make.top.equalTo(labelTitle)
         }
     }
-    private func makeBox(){
-        box.snp.makeConstraints{(make)in
+    private func makeTableView(){
+        tableView.snp.makeConstraints{(make)in
             make.top.equalTo(labelTitle.snp.bottom).offset(5)
             make.bottom.equalToSuperview()
             make.left.right.equalToSuperview()
